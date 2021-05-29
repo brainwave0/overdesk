@@ -141,6 +141,7 @@ def cursor_on_titlebar(mouse_position, position, size, extents):
 
 def check_dragging_window(mouse_position, position, size, extents, window_id):
     global dragged_window
+    global lmb_pressed
     result = cursor_on_titlebar(
         mouse_position, position, size,
         extents) and lmb_pressed or window_id == dragged_window and lmb_pressed
